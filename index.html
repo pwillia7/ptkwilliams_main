@@ -20,7 +20,7 @@
         .navbar-nav li{float:none;display:inline-block; vertical-align: top;}
          .navbar-nav {float:none;display:inline-block; vertical-align: top; margin-right: 15px;}
         .collapse{clear: both;}
-        .down-arrow{font-size: 50px; margin-top: -23px; padding-right: 37px; text-align: center;}
+        .down-arrow{font-size: 50px; margin-top: -23px; padding-right: 37px; text-align: center; float:left; width:100%;}
         @media (min-width: 768px){.navbar-brand{width:100%;text-align:center;}}
 
 	</style>
@@ -28,7 +28,7 @@
   </head>
 
   <body>
-
+<div class="navwrap">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -50,6 +50,7 @@
       </div><!-- /.container -->
     </nav>
       <div class="down-arrow">▼</div>
+    </div>
     <div class="container">
 
       <div class="row">
@@ -73,13 +74,18 @@
       $(document).ready(function () {
         if(window.innerWidth > 768){
   $('.navbar').css('display','none');
-  }
+  
+  
+
   $('.down-arrow').css('margin-top','-79px');
-  $('.down-arrow').hover(
+  $('.navwrap').hover(
     function(){
         $('.navbar').css('display','block');
          $('.down-arrow').css('margin-top','-23px');
-    });
+    },function(){
+      $('.navbar').css('display','none');
+        $('.down-arrow').css('margin-top','-79px');
+    });}
 });
       if(window.innerWidth < 768){
         $('.down-arrow').css('display','none');
