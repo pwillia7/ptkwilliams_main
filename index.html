@@ -15,14 +15,17 @@
     <style>
         body {margin-top: 60px;font-family: 'Sintony', sans-serif;background: url("images/background.png");}
         .navbar{font-family: 'Carme', sans-serif; text-align: center; background: url("images/navbackground.png"); margin-bottom: 0;}
-        .navbar-brand{font-size: 19px;}
+        .navbar-brand{font-size: 19px; margin-left: 0 !important; padding: 5px 0;}
         .navbar-header{width: 100%; text-align: center;}
         .navbar-nav li{float:none;display:inline-block; vertical-align: top;}
          .navbar-nav {float:none;display:inline-block; vertical-align: top; margin-right: 15px;}
         .collapse{clear: both;}
-        .down-arrow{font-size: 50px; margin-top: -23px; padding-right: 37px; text-align: center; float:left; width:100%;}
+        .down-arrow{font-size: 50px; position: fixed; top: -13px; width: 100%; text-align: center; z-index: 999;}
         @media (min-width: 768px){.navbar-brand{width:100%;text-align:center;}}
-
+        @media (max-width: 768px){.navbar-brand{padding: 15px 10px;}}
+        .center{text-align: center;}
+        #projects-carousel{margin-bottom: 205px;}
+        #about{margin-top: 35px;}
 	</style>
 
   </head>
@@ -43,8 +46,9 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <li><a href="http://blog.ptkwilliams.com">Blog</a></li>
-            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="#projects-carousel">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -53,16 +57,47 @@
     </div>
     <div class="container">
 
-      <div class="row">
-        <div class="col-lg-8">
-          <h1>Patrick Williams</h1>
-          <p>Welcome to ptkwilliams.com! I'm a web developer living in Austin Texas. 
-
-          Take a look at what I'm working on, check out my blog, or shoot me a note and say hi. <span style="color: red;">This site is currently under construction.</span></p>
+      <div id="about" class="row center">
+        <div class="col-lg-12">
+          <h3>About</h3>
+          <p>Hi! I'm Patrick Williams. Welcome to ptkwilliams.com! I'm a web developer living in Austin Texas.<br>
+          Take a look at what I'm working on, check out my blog, or shoot me a note and say hello. <br><br><span style="color: red;">This site is currently under construction.</span></p>
         </div>
       </div>
 
+        <div id="contact" class="row center">
+        <div class="col-lg-12">
+          <h3>Patrick Williams</h3>
+          <p>Web Developer</p>
+          <p><i>ptk.williams {at} gmail {dot} com<br><br>
+         281.336.0755</i></p>
+
+        </div>
+      </div>
+
+<div id="projects-carousel" class="carousel slide"><!-- class of slide for animation -->
+  <div class="carousel-inner">
+    <div class="item active"><!-- class of active since it's the first item -->
+      <a href="http://timezone.ptkwilliams.com"><img src="images/carousel/timezone_preview.png" alt="" /></a>
+      <div class="carousel-caption">
+        <p>Timezone Converter</p>
+      </div>
+    </div>
+    <div class="item">
+      <a href='http://bcc.ptkwilliams.com'><img src="images/carousel/bcc_preview.png" alt="" /></a>
+      <div class="carousel-caption">
+        <p>Best Buy Competitor Comparer</p>
+      </div>
+    </div>
+  </div><!-- /.carousel-inner -->
+  <!--  Next and Previous controls below
+        href values must reference the id for this carousel -->
+    <a class="carousel-control left" href="#projects-carousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#projects-carousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
+
     </div><!-- /.container -->
+
 
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -77,19 +112,41 @@
   
   
 
-  $('.down-arrow').css('margin-top','-79px');
+
   $('.navwrap').hover(
     function(){
         $('.navbar').css('display','block');
-         $('.down-arrow').css('margin-top','-23px');
+        $('.down-arrow').css('top','43px');
+
     },function(){
       $('.navbar').css('display','none');
-        $('.down-arrow').css('margin-top','-79px');
+      $('.down-arrow').css('top','-13px');      
+
     });}
+var navbarItems = document.getElementsByClassName('navbar-nav')[0].children;
+//for(i = 0; i< navbarItems.length; i++)
+ // navbarItems[i].onclick = function(){window.scrollBy(0,300);};
 });
       if(window.innerWidth < 768){
         $('.down-arrow').css('display','none');
       }
+      var windowHeight = window.innerHeight;
+      var aboutHeight = document.getElementById('about').clientHeight;
+      var contactHeight = document.getElementById('contact').clientHeight;
+      $('#about').css('margin-bottom',windowHeight - aboutHeight + "px");
+      $('#contact').css('margin-bottom',windowHeight - contactHeight + "px");
+
+var currentAnchor = window.location.hash; 
+  $(window).on('hashchange', function() {
+      if((window.location.hash!= '#projects-carousel') && (window.location.hash != currentAnchor)){
+    window.scrollBy(0,-300);
+
+}
+    currentAnchor = window.location.hash;
+});
+
+//doesn't work because hash doens't change
+
     </script>
   </body>
 </html>
