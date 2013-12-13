@@ -15,11 +15,11 @@
     <style>
         body {margin-top: 60px;font-family: 'Varela Round', sans-serif;background: url("images/background.png");}
         .navbar{font-family: 'Carme', sans-serif; text-align: center; background: url("images/navbackground.png"); margin-bottom: 0;}
-        .navbar-brand{color: #CEBB50!important;font-size: 22px; margin-left: 0 !important; padding: 5px 0;}
-         .brand{color: #CEBB50 !important;font-size: 19px; margin-left: 0 !important; padding: 5px 0;}
+        .navbar-brand{color: #CEBB9A !important;font-size: 22px; margin-left: 0 !important; padding: 5px 0;}
+         .brand{color: #CEBB9A !important;font-size: 19px; margin-left: 0 !important; padding: 5px 0;}
          .brand:hover{text-decoration: none;}
         .navbar-header{width: 100%; text-align: center;}
-        .navbar-nav li{font-size: 15px;float:none;display:inline-block; vertical-align: top;}
+        .navbar-nav li{float:none;display:inline-block; vertical-align: top;}
          .navbar-nav {float:none;display:inline-block; vertical-align: top; }
         .collapse{clear: both;}
         @media (min-width: 768px){.navbar-brand{width:100%;text-align:center;}}
@@ -75,7 +75,7 @@
       <div id="about" class="row center">
         <div class="col-lg-12">
           <h2>About</h2>
-          <p>Hi! I'm Patrick Williams. Welcome to ptkwilliams.com!<br>I'm a web developer living in Austin Texas.<br>
+          <p>Hi! I'm Patrick Williams. Welcome to ptkwilliams.com! <br><br>I'm a web developer living in Austin Texas.<br>
           Take a look at what I'm working on, check out my blog, or shoot me a note and say hello. </p>
         </div>
       </div>
@@ -89,7 +89,7 @@
              <a href="http://facebook.com/ptkwilliams"><img class="contactIcon" src="images/icons/facebook500.png"/></a>
              <a href="http://www.linkedin.com/profile/view?id=59967394"><img class="contactIcon" src="images/icons/linkedin.png"/></a>
              <a href="http://google.com/+PatrickWilliamsprofile"><img class="contactIcon" src="images/icons/googleplus-revised.png"/></a>
-             <a href="mailto:ptk.williams@gmail.com"><img class="contactIcon" src="images/icons/email.png"/></a><br>281.336.0755
+             <a href="mailto:ptk.williams@gmail.com"><img class="contactIcon" src="images/icons/email.png"/></a><br><br>281.336.0755
 </p>
 
           

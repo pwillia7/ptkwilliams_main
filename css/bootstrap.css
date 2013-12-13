@@ -300,9 +300,9 @@ html {
 }
 
 body {
-  font-family: 'Sintony',sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
+  font-family: 'Varela Round',sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
   color: #333333;
   background-color: #ffffff;
 }
@@ -462,7 +462,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Sintony',sans-serif;
+  font-family: 'Varela Round',sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
