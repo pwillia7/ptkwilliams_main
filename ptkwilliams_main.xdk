@@ -1,0 +1,31 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.0",
+    "creationData": {
+      "type": "Import",
+      "src": "/Users/patrick.williams/Documents/projects/ptkwilliams_main",
+      "projectGuid": "976ae1e3-7608-4105-8d5b-bc426bceb67e",
+      "lastModifiedDate": 1388093330717,
+      "creationDate": 1388093328680
+    },
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [
+      {
+        "name": "Cordova",
+        "version": "2.9.0",
+        "data": {
+          "default": true
+        }
+      },
+      {
+        "name": "intelXDK",
+        "version": "4.0.0",
+        "data": {
+          "default": true
+        }
+      }
+    ],
+    "services": []
+  }
+}

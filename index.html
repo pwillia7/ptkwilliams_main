@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,14 +9,31 @@
     <title>ptkwilliams</title>
 
     <!-- Bootstrap core CSS -->
+    <link href="css/main.css">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Varela+Round|Carme' rel='stylesheet' type='text/css'>
     <!-- Add custom CSS here -->
     <style>
-        body {margin-top: 60px;font-family: 'Varela Round', sans-serif;background: url("images/background.png");}
-        .navbar{font-family: 'Carme', sans-serif; text-align: center; background: url("images/navbackground.png"); margin-bottom: 0;}
+        .container{
+z-index: 1;
+background: #FEFEFA;
+border-radius: 1px;
+box-shadow: 0px 0px 260px 50px rgba(244,240,222,0.99); }
+        body {margin-top: 60px;font-family: 'Varela Round', sans-serif;background: white; }
+        .navbar{
+z-index: 2;
+font-family: 'Carme', sans-serif;
+text-align: center;
+background: #FFFEF5;
+margin-bottom: 0;}
         .navbar-brand{color: #CEBB50!important;font-size: 22px; margin-left: 0 !important; padding: 5px 0;}
-         .brand{color: #CEBB50 !important;font-size: 19px; margin-left: 0 !important; padding: 5px 0;}
+         .brand{color: ghostwhite!important;
+margin-left: 0 !important;
+background: lightsteelblue;
+border-radius: 20px;
+padding: 11px 20px;
+display: inline-block;
+}}
          .brand:hover{text-decoration: none;}
         .navbar-header{width: 100%; text-align: center;}
         .navbar-nav li{font-size: 15px;float:none;display:inline-block; vertical-align: top;}
@@ -47,7 +64,7 @@
   <body>
 <div class="navwrap">
     <nav id="navBar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+    
         <div class="navbar-header">
            <button id='navibutton' type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -56,7 +73,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand"><a class="brand" href="index.html">ptkwilliams</a></div>
-        </div>
+   
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <li><a href="http://blog.ptkwilliams.com">Blog</a></li>
@@ -204,6 +221,17 @@ var currentAnchor = window.location.hash;
 });
 
 //doesn't work because hash doens't change
+
+$(window).scroll(function(){
+    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+       $('#navbar').removeClass('headroom--unpinned');
+       $('#navbar').addClass('headroom--pinned');
+
+    }
+});
+
+
+
 
     </script>
   </body>
