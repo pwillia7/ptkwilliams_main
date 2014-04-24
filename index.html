@@ -14,6 +14,9 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round|Carme' rel='stylesheet' type='text/css'>
     <!-- Add custom CSS here -->
     <style>
+        .displayIB{
+            display: inline-block;
+        }
         .container{
 z-index: 1;
 background: #FEFEFA;
@@ -43,7 +46,7 @@ display: inline-block;
          .navbar-nav {float:none;display:inline-block; vertical-align: top; }
         .collapse{clear: both;}
         @media (min-width: 768px){.navbar-brand{width:100%;text-align:center;}}
-        @media (max-width: 768px){.navbar-brand{padding: 15px 10px;}.navbar-nav{font-size: 13px;}.carousel{width: 100%;}}
+        @media (max-width: 768px){.navbar-brand{padding: 7px 10px;}.navbar-nav{font-size: 13px;}.carousel{width: 100%;}}
         .center{text-align: center;}
         #projects-carousel{margin-bottom: 205px;}
         #about{margin-top: 35px;}
@@ -61,8 +64,9 @@ display: inline-block;
      top: 0;
  }
  #navibutton{
+     border: none;
      background: lightsteelblue;
-     margin-right: 5px;
+     margin: 2.5%;
  }
 	</style>
 
@@ -184,6 +188,7 @@ var navbarItems = document.getElementsByClassName('navbar-nav')[0].children;
  // navbarItems[i].onclick = function(){window.scrollBy(0,300);};
 });
       if(window.innerWidth < 768){
+          
         var carouselwidth = $('.carousel').width();
         $('.down-arrow').css('display','none');
         $('.carousel').css('height',carouselwidth);

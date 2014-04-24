@@ -2376,6 +2376,7 @@ input[type="button"].btn-block {
 }
 
 .collapsing {
+  display: inline-block;
   position: relative;
   height: 0;
   overflow: hidden;
@@ -4103,6 +4104,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-collapse.in {
   overflow-y: auto;
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
